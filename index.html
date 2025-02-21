@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Matematika Quiz</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <!-- Login Page -->
+    <div id="loginPage" class="container">
+        <h1>Login</h1>
+        <div class="form-control">
+            <input type="text" id="username" placeholder="Nama" required>
+        </div>
+        <div class="form-control">
+            <input type="password" id="password" placeholder="Password" required>
+        </div>
+        <button class="btn" onclick="login()">Masuk</button>
+        <div id="loginError" class="result hidden"></div>
+    </div>
+
+    <!-- Menu Page -->
+    <div id="menuPage" class="container hidden">
+        <h1>Menu Utama</h1>
+        <button class="btn" onclick="startLevel(1)">Mulai Level 1</button>
+        <button class="btn" onclick="startLevel(2)">Mulai Level 2</button>
+        <button class="btn" onclick="startLevel(3)">Mulai Level 3</button>
+    </div>
+
+    <!-- Level 1 Page -->
+    <div id="level1Page" class="container hidden">
+        <h2>Soal Matematika - Level 1</h2>
+        <div id="questionsLevel1"></div>
+        <button class="btn" onclick="checkAnswers(1)">Periksa Jawaban</button>
+        <div id="resultLevel1" class="result hidden"></div>
+        <button class="btn hidden" id="nextLevelBtn1" onclick="nextLevel(2)">Lanjut ke Level 2</button>
+    </div>
+
+    <!-- Level 2 Page -->
+    <div id="level2Page" class="container hidden">
+        <h2>Soal Matematika - Level 2</h2>
+        <div id="questionsLevel2"></div>
+        <button class="btn" onclick="checkAnswers(2)">Periksa Jawaban</button>
+        <div id="resultLevel2" class="result hidden"></div>
+        <button class="btn hidden" id="nextLevelBtn2" onclick="nextLevel(3)">Lanjut ke Level 3</button>
+    </div>
+
+    <!-- Level 3 Page -->
+    <div id="level3Page" class="container hidden">
+        <h2>Soal Matematika - Level 3</h2>
+        <div id="questionsLevel3"></div>
+        <button class="btn" onclick="checkAnswers(3)">Periksa Jawaban</button>
+        <div id="resultLevel3" class="result hidden"></div>
+        <button class="btn hidden" id="finishBtn" onclick="finish()">Finish</button>
+    </div>
+
+    <!-- Score Page -->
+    <div id="scorePage" class="container hidden">
+        <h2>Skor Akhir</h2>
+        <div id="finalScore" class="result"></div>
+        <div id="award" class="result"></div>
+        <div id="userNameDisplay" class="result"></div>
+        <div id="repeatPrompt" class="result">Apakah Anda ingin mengulang game?</div>
+        <button class="btn" onclick="restart()">Kembali ke Menu</button>
+    </div>
+
+    <script src="scripts.js"></script>
+</body>
+
+</html>
